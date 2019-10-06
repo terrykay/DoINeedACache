@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.doineedacache.model.CacheEntry
+import com.example.doineedacache.model.DayMonth
 import com.example.doineedacache.repository.CachesFoundRepository
 import kotlinx.coroutines.launch
 import java.util.*
@@ -47,4 +48,3 @@ class CacheParseViewModel(val cachesFoundRepository: CachesFoundRepository): Vie
     val daysInMonth = listOf(31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 }
 
-data class DayMonth(val day: Int, val month: Int)

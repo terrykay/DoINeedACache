@@ -2,25 +2,21 @@ package com.example.doineedacache
 
 import android.app.Activity
 import android.content.Intent
-import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.doineedacache.cacheparse.CacheParseViewModel
 import com.example.doineedacache.cacheparse.CacheParseViewModelFactory
-import com.example.doineedacache.cacheparse.DayMonth
-import com.example.doineedacache.extensions.getPath
+import com.example.doineedacache.calendar.CalendarActivity
+import com.example.doineedacache.calendar.CalendarActivity.Companion.DATES
 import com.example.doineedacache.model.CacheEntry
+import com.example.doineedacache.model.DayMonth
 import com.example.doineedacache.repository.CachesFoundRepositoryImpl
 import com.example.doineedacache.util.FileChooser.Companion.FILE_SELECT_CODE
 import com.example.doineedacache.util.FileChooserImpl
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.util.stream.Collectors
-import java.util.zip.ZipInputStream
 
 class MainActivity : AppCompatActivity() {
 
@@ -61,6 +57,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun showMissingDates(missingDates: List<DayMonth>) {
+        val intent = Intent(this, CalendarActivity::class.java).apply {
+            putExtra(DATES, missingDates.toTypedArray())
+        }
+        startActivity(intent)
         Log.d("MA", "missingDates $missingDates")
         missingDates.forEach { dayMonth ->
             Log.d("MA", "${dayMonth.day}, ${dayMonth.month}")

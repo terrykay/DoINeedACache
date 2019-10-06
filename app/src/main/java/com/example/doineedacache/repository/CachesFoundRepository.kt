@@ -11,6 +11,7 @@ import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParser.START_DOCUMENT
 import org.xmlpull.v1.XmlPullParserFactory
 import java.io.*
+import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.stream.Collectors
@@ -52,39 +53,41 @@ class CachesFoundRepositoryImpl(val context: Context) : CachesFoundRepository {
         lateinit var tempDate: Date
 
         var event = parser.getEventType()
-        while (event != XmlPullParser.END_DOCUMENT) {
-            Log.d("CFR", "Event = $event")
-            tag = parser.name
-            Log.d("CFR", "Tag = $tag")
-            when (event) {
-                XmlPullParser.START_TAG -> {
-                    when (tag) {
-                        "wpt" -> cache = CacheEntry()
-                        "groundspeak:log" -> parsingLog = true
-                    }
-                }
 
-                XmlPullParser.TEXT -> {
-                    text = parser.getText();
-                }
-
-                XmlPullParser.END_TAG -> {
-                    when (tag) {
-                        "groundspeak:date" -> if (parsingLog) tempDate = dateFormatter.parse(text)
-
-                        "groundspeak:name" -> cache.name = text
-                        "groundspeak:log" -> {
-                            parsingLog = false
-                            cache.dateFound = addHoursToDate(tempDate, -4)
+            while (event != XmlPullParser.END_DOCUMENT) {
+                tag = parser.name
+                when (event) {
+                    XmlPullParser.START_TAG -> {
+                        when (tag) {
+                            "wpt" -> cache = CacheEntry()
+                            "groundspeak:log" -> parsingLog = true
                         }
+                    }
 
-                        "wpt" -> cacheList.add(cache)
+                    XmlPullParser.TEXT -> {
+                        text = parser.getText();
+                    }
+
+                    XmlPullParser.END_TAG -> {
+                        when (tag) {
+                            "groundspeak:date" -> if (parsingLog) tempDate =
+                                dateFormatter.parse(text)
+
+                            "groundspeak:name" -> cache.name = text
+                            "groundspeak:log" -> {
+                                parsingLog = false
+                                cache.dateFound = addHoursToDate(tempDate, -4)
+                            }
+
+                            "wpt" -> cacheList.add(cache)
+                        }
                     }
                 }
-            }
-            event = parser.next();
+                event = parser.next();
 
-        }
+            }
+
+
 
         return cacheList
     }
