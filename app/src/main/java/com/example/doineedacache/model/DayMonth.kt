@@ -1,13 +1,16 @@
-package com.example.doineedacache.model
+package uk.themeadow.doineedacache.model
 
 import android.os.Parcel
 import android.os.Parcelable
+import java.util.*
 
 data class DayMonth(val day: Int, val month: Int) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readInt()
     )
+
+    constructor(date: Date) : this(date.date, date.month+1)
 
     override fun writeToParcel(parcel: Parcel?, flags: Int) {
         parcel?.writeInt(day)

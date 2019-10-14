@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "15437514912",
+    "firebase_url": "https://do-i-need-a-cache.firebaseio.com",
+    "project_id": "do-i-need-a-cache",
+    "storage_bucket": "do-i-need-a-cache.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15437514912:android:b0c9ea617a149d51ffe1c5",
+        "android_client_info": {
+          "package_name": "uk.themeadow.doineedacache"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15437514912-pr7d18o8cpnb520ds3qiga51i2qf0mp9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuk4NZnErK24EbbkE6WaDQrDpUH9sf69g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15437514912-pr7d18o8cpnb520ds3qiga51i2qf0mp9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

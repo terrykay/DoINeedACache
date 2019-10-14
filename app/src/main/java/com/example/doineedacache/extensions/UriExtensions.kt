@@ -1,4 +1,4 @@
-package com.example.doineedacache.extensions
+package uk.themeadow.doineedacache.extensions
 
 import android.content.Context
 import android.database.Cursor
