@@ -9,6 +9,11 @@
         <item name="colorControlNormal">@color/white</item>
         <item name="android:textColorPrimary">@color/white</item>
         <item name="titleBarTextColour">@color/white</item>
+        <item name="android:textColor">@color/charcoal</item>
+        <item name="calendarTodayColour">@color/green</item>
+        <item name="calendarPageColour">@color/white</item>
+        <item name="calendarHeaderColour">@color/white</item>
+        <item name="calendarTextColour">@color/charcoal</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

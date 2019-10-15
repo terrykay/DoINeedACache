@@ -1,7 +1,9 @@
 package uk.themeadow.doineedacache.model
 
+import androidx.annotation.Keep
 import java.util.*
 
+@Keep
 class CacheEntry(var dateFound: Date?=null, var name: String="") {
     override fun equals(other: Any?): Boolean {
        if (dateFound==null || other==null)

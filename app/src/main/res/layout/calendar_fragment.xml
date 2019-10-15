@@ -6,13 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    tools:context=".ui.calendar.CalendarFragment">
+    tools:context=".calendar.CalendarActivity">
 
     <com.applandeo.materialcalendarview.CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        app:headerColor="?attr/colorPrimary"
+        app:todayLabelColor="?attr/calendarTodayColour"
+        app:pagesColor="?attr/calendarPageColour"
+        app:headerLabelColor="?attr/titleBarTextColour"
+        app:daysLabelsColor="?attr/calendarTextColour"
+        app:abbreviationsBarColor="?attr/calendarHeaderColour"
+        app:abbreviationsLabelsColor="?attr/android:textColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

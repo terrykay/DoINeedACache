@@ -2,5 +2,9 @@
 <resources>
     <declare-styleable name="Theme">
         <attr name="titleBarTextColour" format="reference" />
+        <attr name="calendarTodayColour" format="reference" />
+        <attr name="calendarPageColour" format="reference" />
+        <attr name="calendarHeaderColour" format="reference" />
+        <attr name="calendarTextColour" format="reference" />
     </declare-styleable>
 </resources>
