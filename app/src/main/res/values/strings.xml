@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">DoINeedACache</string>
+    <string name="app_name">Do I Need A Cache</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="help_content">
+        To use this app, log onto Geocaching.com and download your found log. When launched, you can select the log file (ZIP and GPX supported) which will be parsed and a calendar displayed, showing when you need to look for a cache.\n\n
+        This help screen is only shown at first launch. To see again, select \'help\' from the calander screen.\n\n
+        Still to come:\n
+        &#8226; Add notifications\n
+        &#8226; Add countdown widget\n\n\n
+        Press back to get back.
+    </string>
+    <string name="remove_entry_title">Remove this entry?</string>
+    <string name="remove_entry_body">Remove this day from the list?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="caches_needed">You need to find a cache on %1$d days.</string>
 </resources>

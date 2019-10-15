@@ -1,4 +1,4 @@
-package com.example.doineedacache
+package uk.themeadow.doineedacache
 
 import org.junit.Test
 

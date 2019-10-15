@@ -1,10 +1,11 @@
-package com.example.doineedacache.util
+package uk.themeadow.doineedacache.util
 
 import android.app.Activity
 import android.widget.Toast
 import android.content.Intent
+import android.util.Log
 import androidx.core.app.ActivityCompat.startActivityForResult
-import com.example.doineedacache.util.FileChooser.Companion.FILE_SELECT_CODE
+import uk.themeadow.doineedacache.util.FileChooser.Companion.FILE_SELECT_CODE
 
 
 class FileChooserImpl(val activity: Activity): FileChooser {
@@ -12,7 +13,7 @@ class FileChooserImpl(val activity: Activity): FileChooser {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = start
         intent.addCategory(Intent.CATEGORY_OPENABLE)
-
+        Log.d("MAFCI", "Launch filepicker")
         if (intent.resolveActivity(activity.packageManager)!=null) {
             startActivityForResult(
                 activity,
