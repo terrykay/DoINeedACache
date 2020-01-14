@@ -17,12 +17,12 @@ import uk.themeadow.doineedacache.uk.themeadow.doineedacache.model.ShowChooser
 import uk.themeadow.doineedacache.help.HelpActivity
 import uk.themeadow.doineedacache.model.CacheEntry
 import uk.themeadow.doineedacache.model.DayMonth
-import uk.themeadow.doineedacache.repository.CachesFoundRepositoryImpl
 import uk.themeadow.doineedacache.repository.SettingsRepository
 import uk.themeadow.doineedacache.util.FileChooser.Companion.FILE_SELECT_CODE
 import uk.themeadow.doineedacache.util.FileChooserImpl
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.scope.currentScope
+import uk.themeadow.doineedacache.com.example.doineedacache.repository.CachesFoundRepositoryImpl
 
 class MainActivity : BaseActivity(), MainContract.View {
 

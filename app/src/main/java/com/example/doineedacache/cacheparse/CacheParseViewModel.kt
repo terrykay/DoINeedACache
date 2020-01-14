@@ -12,11 +12,9 @@ import uk.themeadow.doineedacache.uk.themeadow.doineedacache.model.MviValues
 import uk.themeadow.doineedacache.uk.themeadow.doineedacache.model.ShowChooser
 import uk.themeadow.doineedacache.model.CacheEntry
 import uk.themeadow.doineedacache.model.DayMonth
-import uk.themeadow.doineedacache.repository.CachesFoundRepository
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancelAndJoin
 import kotlinx.coroutines.launch
-import java.util.*
+import uk.themeadow.doineedacache.repository.CachesFoundRepository
 
 class CacheParseViewModel(val cachesFoundRepository: CachesFoundRepository): ViewModel() {
 

@@ -15,9 +15,8 @@ import uk.themeadow.doineedacache.model.DayMonth
 import kotlinx.android.synthetic.main.calendar_fragment.*
 import org.koin.android.scope.currentScope
 import uk.themeadow.doineedacache.R
-import uk.themeadow.doineedacache.cacheparse.CacheParseViewModelFactory
 import uk.themeadow.doineedacache.cacheparse.CalendarViewModelFactory
-import uk.themeadow.doineedacache.repository.CachesFoundRepositoryImpl
+import uk.themeadow.doineedacache.com.example.doineedacache.repository.CachesFoundRepositoryImpl
 import uk.themeadow.doineedacache.repository.SettingsRepository
 import kotlin.collections.ArrayList
 
