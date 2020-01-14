@@ -90,6 +90,7 @@ class CachesFoundRepositoryImpl(val context: Context, val localStorage: Settings
                     when (tag) {
                         "groundspeak:date" -> if (parsingLog) tempDate =
                             dateFormatter.parse(text)
+<<<<<<< HEAD
                         "groundspeak:name" -> cache.name = text
                         "groundspeak:type" -> if ("Found it".equals(text)) {
                             cache.dateFound = addHoursToDate(tempDate, -4)
@@ -98,6 +99,13 @@ class CachesFoundRepositoryImpl(val context: Context, val localStorage: Settings
                         "groundspeak:log" -> {
                             parsingLog = false
 
+=======
+
+                        "groundspeak:name" -> cache.name = text
+                        "groundspeak:log" -> {
+                            parsingLog = false
+                            cache.dateFound = addHoursToDate(tempDate, -4)
+>>>>>>> fdca4765cec15e72399866085518f78a58456e10
                         }
 
                         "wpt" -> cacheList.add(cache)
