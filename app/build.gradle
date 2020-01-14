@@ -8,9 +8,9 @@ android {
     signingConfigs {
         release {
             storeFile file('../../../terryandroidkeystore')
-            storePassword "$certpassword"
-            keyAlias = "$keyalias"
-            keyPassword "$certpassword"
+            storePassword = getProperty("certpassword", "CERTPASSWORD")
+            keyAlias = getProperty("keyalias", "KEYALIAS")
+            keyPassword = getProperty("certpassword", "CERTPASSWORD")
         }
     }
     compileSdkVersion 29
